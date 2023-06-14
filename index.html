@@ -35,18 +35,103 @@
         height: 60%;
         width: 100%;
       }
+      .heading-tag {
+        font-weight: bold;
+      }
+      .profile-picture {
+        height: auto;
+        width: 70%;
+      }
+      @media (min-width: 768px) and (max-width: 992px) {
+        .profile-picture {
+          width: 100%;
+        }
+      }
+      .profile {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      @media (max-width: 768px) {
+        .profile-info {
+          margin-top: 20px;
+        }
+      }
+      @media (max-width: 768px) {
+        .profile-divider {
+          border-top: 1px solid #ccc;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="hero bg-dark text-center py-5" style="margin-bottom: 50px">
-      <h1 class="text-white">Yujin Seo의 포트폴리오</h1>
+    <!-- 배너 -->
+    <div
+      class="hero text-center py-5"
+      style="
+        margin-bottom: 50px;
+        background-image: url('./images/banner.png');
+        background-size: 100% auto;
+      "
+    >
+      <h1 class="text-black">Yujin Seo의 포트폴리오</h1>
     </div>
+
+    <!-- 프로필 -->
     <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2 class="heading-tag">Profile</h2>
+          <div class="profile">
+            <div class="row">
+              <!-- 프로필 -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-4">
+                    <img
+                      src="./images/profile.jpg"
+                      alt="프로필 사진"
+                      class="profile-picture"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <div class="profile-info">
+                      <h4 class="profile-subheading">Contact</h4>
+                      <p>✉️ <strong>email.</strong> eugeo16@gmail.com</p>
+                      <p>📞 <strong>Phone.</strong> 010-3990-0342</p>
+                      <h4 class="profile-subheading">Channel</h4>
+                      <p>
+                        💻 <strong>GitHub.</strong>
+                        <a href="https://github.com/eug"
+                          >https://github.com/eug</a
+                        >
+                      </p>
+                      <p>
+                        📄 <strong>Blog.</strong>
+                        <a href="https://velog.io/@eu">https://velog.io/@eu</a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="profile-divider"></div>
+
+    <!-- 프로젝트 -->
+    <div class="container">
+      <h2 class="heading-tag text-center pb-4">Project</h2>
       <div class="row">
         <div class="col-md-4 mb-4">
           <div class="card" data-bs-toggle="modal" data-bs-target="#modal1">
             <img
-              src="./images/b612_title.png"
+              src="./images/b612_title.jpg"
               class="card-img-top"
               alt="머무르다"
             />
@@ -79,11 +164,7 @@
         </div>
         <div class="col-md-4 mb-4">
           <div class="card" data-bs-toggle="modal" data-bs-target="#modal3">
-            <img
-              src="./images/imovie_title.png"
-              class="card-img-top"
-              alt="IMovie"
-            />
+            <img src="./images/imovie.gif" class="card-img-top" alt="IMovie" />
             <div class="card-body">
               <h5 class="card-title">IMovie</h5>
               <h6 class="card-subtitle mb-2 text-muted">
@@ -116,7 +197,7 @@
           </div>
           <div class="modal-body">
             <img
-              src="./images/b612_title.png"
+              src="./images/b612_title.jpg"
               alt="머무르다"
               style="width: 100%"
             />
